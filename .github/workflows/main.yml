@@ -2,8 +2,8 @@ name: Python Tests
 
 
 on:
-push:
-pull_request:
+ push:
+ pull_request:
 
 
 jobs:
@@ -11,16 +11,16 @@ jobs:
    runs-on: ubuntu-latest
 
    
- steps:
-    - uses: actions/checkout@v4
+  steps:
+   - uses: actions/checkout@v4
 
-    
-    - uses: actions/setup-python@v5
-     with:
-      python-version: 3.11
 
-      
-      - run: pip install pytest
+   - uses: actions/setup-python@v5
+    with:
+     python-version: 3.11
 
       
-      - run: pytest
+    - run: pip install pytest
+
+      
+    - run: pytest
